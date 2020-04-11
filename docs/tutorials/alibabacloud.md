@@ -232,16 +232,16 @@ Create an ingress resource manifest file.
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: foo
+  name: nginx
   annotations:
     kubernetes.io/ingress.class: "nginx" # use the one that corresponds to your ingress controller.
 spec:
   rules:
-  - host: foo.external-dns-test.com
+  - host: nginx.external-dns-test.com
     http:
       paths:
       - backend:
-          serviceName: foo
+          serviceName: nginx
           servicePort: 80
 ```
 
